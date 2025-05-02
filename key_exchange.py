@@ -2,7 +2,6 @@ import random
 
 class DiffieHellman:
     def __init__(self, p=None, g=None):
-        # Common small primes for demonstration; in production, use large safe primes.
         self.p = p or 0xFFFFFFFB  # 32-bit prime
         self.g = g or 5
         self.private_key = random.randint(2, self.p - 2)

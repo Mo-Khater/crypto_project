@@ -9,7 +9,7 @@ class StreamCipher:
         return bytes([b ^ k for b, k in zip(data, keystream)])
 
     def encrypt(self, plaintext: str) -> bytes:
-        return self.xor_bytes(plaintext.encode('utf-8'))
+        return self.xor_bytes(plaintext.encode('utf-8')) # convert string to bytes
 
     def decrypt(self, ciphertext: bytes) -> str:
         decrypted_bytes = self.xor_bytes(ciphertext)
